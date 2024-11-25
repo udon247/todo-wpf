@@ -5,8 +5,52 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:todo_wpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Height="360"
+        Title="MainWindow"
+        Width="640">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="300" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
 
+        <Label Content="Todo"
+               FontSize="24"
+               Grid.Column="2"
+               Grid.Row="1"
+               Margin="0,0,0,5" />
+
+        <TextBox FontSize="14"
+                 Grid.Column="2"
+                 Grid.Row="2"
+                 Margin="0,5,0,5"
+                 Name="content"
+                 VerticalAlignment="Center" />
+        <Button Content="追加"
+                FontSize="14"
+                Grid.Column="2"
+                Grid.Row="3"
+                HorizontalAlignment="Center"
+                Margin="0,5,0,5"
+                Name="saveButton"
+                VerticalAlignment="Center"
+                Click="saveButton_Click" />
+
+        <ListBox FontSize="14"
+                 Grid.Column="2"
+                 Grid.Row="4"
+                 Margin="0,5,0,0"
+                 Name="memoList" />
     </Grid>
 </Window>
